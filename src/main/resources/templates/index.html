@@ -1,24 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
-	<p>Open GitHub Issues</p>
-	<table>
-		<thead>
-			<tr>
-				<td>Repo</td>
-				<td>Issue</td>
-				<td>Title</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="issue : ${issues}">
-				<td th:text="${issue}"></td>
-				<td><a th:href="${issue}" target="_blank">
-						<span th:text="${issue}" />
-				</a></td>
-				<td th:text="${issue}"></td>
-			</tr>
-		</tbody>
-	</table>
+	<p th:text="${key}" th:unless="${key == null}">test1</p>
+	<p th:text="${wrongKey}" th:unless="${wrongKey == null}">test2</p>
 </body>
 </html>

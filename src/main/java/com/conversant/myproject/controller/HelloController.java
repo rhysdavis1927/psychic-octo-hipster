@@ -9,7 +9,7 @@ public class HelloController {
 
     @RequestMapping(value = "/")
     public String index(Model model) {
-        model.addAttribute("issues", "something");
+        model.addAttribute("key", "value");
         return "index";
     }
 }
